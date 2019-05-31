@@ -1,0 +1,28 @@
+<a href="javascript:history.back()"><button type="button">Back</button></a>
+<br>
+<a href="/articles"><button type="button">All articles</button></a>
+
+<!-- End Nav  -->
+
+<form action="/articles/<%= @article.id %>" method="post">
+  <!-- the form itself still posts -->
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <!-- the hidden form is the one that overrides with patch -->
+  <p>
+    <label>Title:</label>
+    <input type="text" name="title" value="<%= @article.title %>">
+  </p>
+  <p>
+    <label>Content:</label>
+    <input type="textarea" name="content" value="<%= @article.content %>">
+  </p>
+  <p>
+    <input type="submit" name="" value="Save">
+  </p>
+</form>
+
+
+<!-- <p>Article #<%= @article.id %></p>
+<p><%= @article.title %></p>
+
+<p><%= @article.content %></p> -->
