@@ -1,0 +1,14 @@
+<a href="javascript:history.back()"><button type="button">Back</button></a>
+<br>
+<a href="/articles"><button type="button">All articles</button></a>
+<br>
+<a href="/articles/<%= @article.id %>/edit"><button type="button">Edit this article</button></a>
+<form method="post" action="/articles/<%= @article.id %>/delete">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete this article">
+</form>
+
+<p>Article #<%= @article.id %></p>
+<h2><%= @article.title %></h2>
+
+<p><%= @article.content %></p>
