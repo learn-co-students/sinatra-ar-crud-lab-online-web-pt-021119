@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
 
   get '/post' do
     binding.pry
-    Model.create(title: params[:title])
+    Article.create(title: params[:title])
     erb :new
   end
 end
