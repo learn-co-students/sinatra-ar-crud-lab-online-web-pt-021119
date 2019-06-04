@@ -10,4 +10,10 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
   end
+
+  get '/post' do
+    binding.pry
+    Model.create(title: params[:title])
+    erb :new
+  end
 end
