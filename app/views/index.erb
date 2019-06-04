@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Index of articles</h1>
+    <% @articles.each do |article| %>
+    <p><%= article.id %>. <%= article.title %></p>
+    <% end %>
+
+    <br>
+    <a href="/articles/new">Post a new article</a>
+  </body>
+</html>
