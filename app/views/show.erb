@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1><%= @article.title %> (id = <%= @article.id %>)</h1>
+    <p><%= @article.content %></p>
+
+    <a href="/articles">Go to index</a>
+    <br>
+    <form class="" action="/articles/<%= @article.id %>" method="post">
+      <input id="hidden" type="hidden" name="_method" value="DELETE">
+      <br>
+      <input type="submit" name="" value="DELETE">
+    </form>
+  </body>
+</html>
