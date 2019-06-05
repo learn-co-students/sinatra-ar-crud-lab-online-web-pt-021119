@@ -42,4 +42,10 @@ class ApplicationController < Sinatra::Base
     @article_instance.update(title: params[:title], content: params[:content])
   end
 
+  delete '/articles/:id/delete' do
+    Article.destroy(params[:id])
+
+    erb :index
+  end
+
 end
