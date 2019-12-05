@@ -1,0 +1,13 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h1>All Articles</h1>
+  <ul><% @articles.each do |art| %>
+    <li><%= art.title %></li>
+    <p><%= art.content %></p>
+    <% end %>
+  </ul>
+</body>
+</html>
